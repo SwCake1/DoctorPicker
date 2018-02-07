@@ -10,11 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Properties
+    
+    var specialities = [Speciality]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        NetworkService.shared.request()
+        NetworkService.shared.getSpecList() { [weak self] specList in
+            guard let specialityArray = specList?.list! else {
+                return
+            }
+            
+            self?.specialities = specialityArray
+            
+            for item in self!.specialities {
+                print(item.id)
+            }
+        }
     }
 }
 

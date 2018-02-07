@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00923DBB94CEB7E8D97D0556 /* Pods_DoctorPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EE9D2A653BE3B3788FB023 /* Pods_DoctorPicker.framework */; };
+		1926716B4A32ACC6E926D825 /* Pods_DoctorPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B72702D12A280BA5CCB98 /* Pods_DoctorPicker.framework */; };
 		F5C7CC56202AF158003B6B29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC55202AF158003B6B29 /* AppDelegate.swift */; };
 		F5C7CC58202AF158003B6B29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC57202AF158003B6B29 /* ViewController.swift */; };
 		F5C7CC5B202AF158003B6B29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C7CC59202AF158003B6B29 /* Main.storyboard */; };
@@ -15,12 +15,14 @@
 		F5C7CC60202AF158003B6B29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C7CC5E202AF158003B6B29 /* LaunchScreen.storyboard */; };
 		F5C7CC6A202AF267003B6B29 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC69202AF267003B6B29 /* NetworkService.swift */; };
 		F5C7CC6C202AFFBC003B6B29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C7CC6B202AFFBC003B6B29 /* Default-568h@2x.png */; };
+		F5C7CC6E202B3F24003B6B29 /* Speciality.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC6D202B3F24003B6B29 /* Speciality.swift */; };
+		F5C7CC71202B6395003B6B29 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC70202B6395003B6B29 /* Doctor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		12EE9D2A653BE3B3788FB023 /* Pods_DoctorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5E31567406754C88AD4539C /* Pods-DoctorPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorPicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorPicker/Pods-DoctorPicker.debug.xcconfig"; sourceTree = "<group>"; };
-		DA4269C96BA75DB1ED402692 /* Pods-DoctorPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorPicker/Pods-DoctorPicker.release.xcconfig"; sourceTree = "<group>"; };
+		2ACB84458FFE7D2A7B1CBE25 /* Pods-DoctorPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorPicker/Pods-DoctorPicker.release.xcconfig"; sourceTree = "<group>"; };
+		776679B3EA1A29EB5AD4E86A /* Pods-DoctorPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorPicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorPicker/Pods-DoctorPicker.debug.xcconfig"; sourceTree = "<group>"; };
+		9A4B72702D12A280BA5CCB98 /* Pods_DoctorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C7CC52202AF158003B6B29 /* DoctorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C7CC55202AF158003B6B29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5C7CC57202AF158003B6B29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		F5C7CC61202AF158003B6B29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C7CC69202AF267003B6B29 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F5C7CC6B202AFFBC003B6B29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F5C7CC6D202B3F24003B6B29 /* Speciality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speciality.swift; sourceTree = "<group>"; };
+		F5C7CC70202B6395003B6B29 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,26 +41,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00923DBB94CEB7E8D97D0556 /* Pods_DoctorPicker.framework in Frameworks */,
+				1926716B4A32ACC6E926D825 /* Pods_DoctorPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B9943EFF1D1DA5A714668F9 /* Pods */ = {
+		4AF846084B6A3ABBFF431A6E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A5E31567406754C88AD4539C /* Pods-DoctorPicker.debug.xcconfig */,
-				DA4269C96BA75DB1ED402692 /* Pods-DoctorPicker.release.xcconfig */,
+				776679B3EA1A29EB5AD4E86A /* Pods-DoctorPicker.debug.xcconfig */,
+				2ACB84458FFE7D2A7B1CBE25 /* Pods-DoctorPicker.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CB32D1D653EB0ECEF1E8962E /* Frameworks */ = {
+		93CA100767FBF67A52DE7569 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				12EE9D2A653BE3B3788FB023 /* Pods_DoctorPicker.framework */,
+				9A4B72702D12A280BA5CCB98 /* Pods_DoctorPicker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -67,8 +71,8 @@
 				F5C7CC6B202AFFBC003B6B29 /* Default-568h@2x.png */,
 				F5C7CC54202AF158003B6B29 /* DoctorPicker */,
 				F5C7CC53202AF158003B6B29 /* Products */,
-				0B9943EFF1D1DA5A714668F9 /* Pods */,
-				CB32D1D653EB0ECEF1E8962E /* Frameworks */,
+				4AF846084B6A3ABBFF431A6E /* Pods */,
+				93CA100767FBF67A52DE7569 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,7 +87,8 @@
 		F5C7CC54202AF158003B6B29 /* DoctorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				F5C7CC68202AF24F003B6B29 /* Classes */,
+				F5C7CC6F202B637C003B6B29 /* Models */,
+				F5C7CC68202AF24F003B6B29 /* Services */,
 				F5C7CC67202AF16A003B6B29 /* Supporting Files */,
 				F5C7CC57202AF158003B6B29 /* ViewController.swift */,
 			);
@@ -102,12 +107,21 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F5C7CC68202AF24F003B6B29 /* Classes */ = {
+		F5C7CC68202AF24F003B6B29 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				F5C7CC69202AF267003B6B29 /* NetworkService.swift */,
 			);
-			path = Classes;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F5C7CC6F202B637C003B6B29 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5C7CC6D202B3F24003B6B29 /* Speciality.swift */,
+				F5C7CC70202B6395003B6B29 /* Doctor.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,12 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5C7CC64202AF158003B6B29 /* Build configuration list for PBXNativeTarget "DoctorPicker" */;
 			buildPhases = (
-				9FF023BB89443228110C9F57 /* [CP] Check Pods Manifest.lock */,
+				E2B14429CD0D940DD0D7F234 /* [CP] Check Pods Manifest.lock */,
 				F5C7CC4E202AF158003B6B29 /* Sources */,
 				F5C7CC4F202AF158003B6B29 /* Frameworks */,
 				F5C7CC50202AF158003B6B29 /* Resources */,
-				2F9E405AF6C1C559208DF5FC /* [CP] Embed Pods Frameworks */,
-				E7B77E2AD2524F53D4F02F6D /* [CP] Copy Pods Resources */,
+				82E841ECAF9E8F0FBB5A281B /* [CP] Embed Pods Frameworks */,
+				605792F96D535F04D4097AA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,7 +196,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2F9E405AF6C1C559208DF5FC /* [CP] Embed Pods Frameworks */ = {
+		605792F96D535F04D4097AA7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoctorPicker/Pods-DoctorPicker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82E841ECAF9E8F0FBB5A281B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,11 +219,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DoctorPicker/Pods-DoctorPicker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,7 +233,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoctorPicker/Pods-DoctorPicker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9FF023BB89443228110C9F57 /* [CP] Check Pods Manifest.lock */ = {
+		E2B14429CD0D940DD0D7F234 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,21 +251,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E7B77E2AD2524F53D4F02F6D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoctorPicker/Pods-DoctorPicker-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -243,7 +259,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5C7CC58202AF158003B6B29 /* ViewController.swift in Sources */,
+				F5C7CC71202B6395003B6B29 /* Doctor.swift in Sources */,
 				F5C7CC6A202AF267003B6B29 /* NetworkService.swift in Sources */,
+				F5C7CC6E202B3F24003B6B29 /* Speciality.swift in Sources */,
 				F5C7CC56202AF158003B6B29 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +397,7 @@
 		};
 		F5C7CC65202AF158003B6B29 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5E31567406754C88AD4539C /* Pods-DoctorPicker.debug.xcconfig */;
+			baseConfigurationReference = 776679B3EA1A29EB5AD4E86A /* Pods-DoctorPicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,7 +414,7 @@
 		};
 		F5C7CC66202AF158003B6B29 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA4269C96BA75DB1ED402692 /* Pods-DoctorPicker.release.xcconfig */;
+			baseConfigurationReference = 2ACB84458FFE7D2A7B1CBE25 /* Pods-DoctorPicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
