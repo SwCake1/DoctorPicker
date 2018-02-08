@@ -10,7 +10,7 @@ import Foundation
 
 struct Doctor: Codable {
     
-    var id: String?
+    var id: Int?
     var name: String?
     var photoUrl: String?
     var description: String?
@@ -25,7 +25,7 @@ struct Doctor: Codable {
 
 // Uses for convinient parsing only
 struct DoctorList: Codable  {
-    var list: [Speciality]?
+    var list: [Doctor]?
     
     enum CodingKeys: String, CodingKey {
         case list = "DoctorList"

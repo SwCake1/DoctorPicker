@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1926716B4A32ACC6E926D825 /* Pods_DoctorPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B72702D12A280BA5CCB98 /* Pods_DoctorPicker.framework */; };
 		F5C7CC56202AF158003B6B29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC55202AF158003B6B29 /* AppDelegate.swift */; };
-		F5C7CC58202AF158003B6B29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC57202AF158003B6B29 /* ViewController.swift */; };
+		F5C7CC58202AF158003B6B29 /* SpecialitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC57202AF158003B6B29 /* SpecialitiesViewController.swift */; };
 		F5C7CC5B202AF158003B6B29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C7CC59202AF158003B6B29 /* Main.storyboard */; };
 		F5C7CC5D202AF158003B6B29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C7CC5C202AF158003B6B29 /* Assets.xcassets */; };
 		F5C7CC60202AF158003B6B29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C7CC5E202AF158003B6B29 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,8 @@
 		F5C7CC6C202AFFBC003B6B29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C7CC6B202AFFBC003B6B29 /* Default-568h@2x.png */; };
 		F5C7CC6E202B3F24003B6B29 /* Speciality.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC6D202B3F24003B6B29 /* Speciality.swift */; };
 		F5C7CC71202B6395003B6B29 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC70202B6395003B6B29 /* Doctor.swift */; };
+		F5C7CC76202B9575003B6B29 /* DoctorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC75202B9575003B6B29 /* DoctorsViewController.swift */; };
+		F5C7CC79202BA5B9003B6B29 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC78202BA5B9003B6B29 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,7 @@
 		9A4B72702D12A280BA5CCB98 /* Pods_DoctorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C7CC52202AF158003B6B29 /* DoctorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C7CC55202AF158003B6B29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5C7CC57202AF158003B6B29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5C7CC57202AF158003B6B29 /* SpecialitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialitiesViewController.swift; sourceTree = "<group>"; };
 		F5C7CC5A202AF158003B6B29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5C7CC5C202AF158003B6B29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5C7CC5F202AF158003B6B29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		F5C7CC6B202AFFBC003B6B29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F5C7CC6D202B3F24003B6B29 /* Speciality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speciality.swift; sourceTree = "<group>"; };
 		F5C7CC70202B6395003B6B29 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		F5C7CC75202B9575003B6B29 /* DoctorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsViewController.swift; sourceTree = "<group>"; };
+		F5C7CC78202BA5B9003B6B29 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +91,13 @@
 		F5C7CC54202AF158003B6B29 /* DoctorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				F5C7CC77202BA38A003B6B29 /* Other */,
 				F5C7CC6F202B637C003B6B29 /* Models */,
 				F5C7CC68202AF24F003B6B29 /* Services */,
+				F5C7CC72202B94D5003B6B29 /* Controllers */,
 				F5C7CC67202AF16A003B6B29 /* Supporting Files */,
-				F5C7CC57202AF158003B6B29 /* ViewController.swift */,
+				F5C7CC78202BA5B9003B6B29 /* Extensions.swift */,
+				F5C7CC59202AF158003B6B29 /* Main.storyboard */,
 			);
 			path = DoctorPicker;
 			sourceTree = "<group>";
@@ -99,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				F5C7CC55202AF158003B6B29 /* AppDelegate.swift */,
-				F5C7CC59202AF158003B6B29 /* Main.storyboard */,
 				F5C7CC5C202AF158003B6B29 /* Assets.xcassets */,
 				F5C7CC5E202AF158003B6B29 /* LaunchScreen.storyboard */,
 				F5C7CC61202AF158003B6B29 /* Info.plist */,
@@ -122,6 +128,22 @@
 				F5C7CC70202B6395003B6B29 /* Doctor.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F5C7CC72202B94D5003B6B29 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5C7CC57202AF158003B6B29 /* SpecialitiesViewController.swift */,
+				F5C7CC75202B9575003B6B29 /* DoctorsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F5C7CC77202BA38A003B6B29 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5C7CC58202AF158003B6B29 /* ViewController.swift in Sources */,
+				F5C7CC58202AF158003B6B29 /* SpecialitiesViewController.swift in Sources */,
+				F5C7CC76202B9575003B6B29 /* DoctorsViewController.swift in Sources */,
+				F5C7CC79202BA5B9003B6B29 /* Extensions.swift in Sources */,
 				F5C7CC71202B6395003B6B29 /* Doctor.swift in Sources */,
 				F5C7CC6A202AF267003B6B29 /* NetworkService.swift in Sources */,
 				F5C7CC6E202B3F24003B6B29 /* Speciality.swift in Sources */,

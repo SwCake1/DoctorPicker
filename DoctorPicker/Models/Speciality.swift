@@ -10,8 +10,8 @@ import Foundation
 
 struct Speciality: Codable {
     
-    var id: String?
-    var name: String?
+    var id = ""
+    var name = ""
     
     enum CodingKeys: String, CodingKey {
         case id = "Id"

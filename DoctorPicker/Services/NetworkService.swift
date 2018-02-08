@@ -22,11 +22,34 @@ class NetworkService {
     fileprivate let user = "partner.13703"
     fileprivate let password = "ZZdFmtJD" // open pass in let - only for demo app
     
+    fileprivate let city = "1"
+    fileprivate let count = "10"
+    
     // MARK: - Public functions
     
-    func getSpecList(completion: @escaping (SpecList?)->()) {
+    func getSpecList(completion: @escaping ([Speciality]?)->()) {
         
         let url = specListURL()
+        
+        getObjects(ofType: SpecList.self, fromUrl: url) { (SpecList) in
+            completion(SpecList?.list)
+        }
+    }
+    
+    func getDoctors(bySpecialityId id: String , completion: @escaping ([Doctor]?)->()) {
+        
+        let url = doctorListURL(forSpecialityId: id)
+        
+        getObjects(ofType: DoctorList.self, fromUrl: url) { (DoctorList) in
+            completion(DoctorList?.list)
+        }
+    }
+    
+    // MARK: - Connection processing
+    
+    // Get Specialities/Doctors objects from DocDoc API via JSON and decoding
+    fileprivate func getObjects<T: Decodable>(ofType type: T.Type, fromUrl url: String, completion: @escaping (T?)->()) {
+        
         let headers = header()
         
         Alamofire.request(url,
@@ -37,33 +60,12 @@ class NetworkService {
                                 return
                             }
                             
-                            print("Specilities request: ", response.request?.url?.absoluteString ?? "")
+                            print("Object request: ", response.request?.url?.absoluteString ?? "")
                             
-                            let specList = self?.decode(to: SpecList.self, from: data)
-                            completion(specList!)
+                            let objectList = self?.decode(to: type, from: data)
+                            completion(objectList!)
         }
     }
-    
-    func getDoctors(bySpecialityId id: Int , completion: @escaping (SpecList?)->()) {
-        
-        let url = specListURL()
-        let headers = header()
-        
-        Alamofire.request(url,
-                          method: .get,
-                          headers: headers).responseData { [weak self] response in
-                            guard let data = response.value else {
-                                print("Response don't received: ", response.error ?? "no error data")
-                                return
-                            }
-                            
-                            print("Specilities request: ", response.request?.url?.absoluteString ?? "")
-                            
-                            let specList = self?.decode(to: SpecList.self, from: data)
-                            completion(specList!)
-        }
-    }
-    
     
     // MARK: - Connection config
     
@@ -73,16 +75,16 @@ class NetworkService {
         let base64Credentials = credentialData.base64EncodedString(options: [])
         return ["Authorization": "Basic \(base64Credentials)"]
     }
-
+    
     fileprivate func specListURL() -> String {
         
-        let path = "speciality/city=moscow/onlySimple=1"
+        let path = "speciality/city/\(city)/onlySimple/1"
         return baseURL + path
     }
     
-    fileprivate func doctorListURL(forSpecialityId id: Int) -> String {
+    fileprivate func doctorListURL(forSpecialityId id: String) -> String {
         
-        let path = "doctor/list/start/city=moscow/specialityID=\(id)"
+        let path = "doctor/list/start/0/count/\(count)/city/\(city)"
         return baseURL + path
     }
     
@@ -102,8 +104,5 @@ class NetworkService {
             return nil
         }
     }
-    
-
-    
 }
 
