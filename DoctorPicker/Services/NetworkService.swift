@@ -23,7 +23,7 @@ class NetworkService {
     fileprivate let password = "ZZdFmtJD" // open pass in let - only for demo app
     
     fileprivate let city = "1"
-    fileprivate let count = "10"
+    fileprivate let count = "15"
     
     // MARK: - Public functions
     
@@ -84,7 +84,7 @@ class NetworkService {
     
     fileprivate func doctorListURL(forSpecialityId id: String) -> String {
         
-        let path = "doctor/list/start/0/count/\(count)/city/\(city)"
+        let path = "doctor/list/start/0/count/\(count)/city/\(city)/speciality/\(id)"
         return baseURL + path
     }
     

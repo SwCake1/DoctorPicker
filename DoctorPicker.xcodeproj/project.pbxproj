@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1926716B4A32ACC6E926D825 /* Pods_DoctorPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B72702D12A280BA5CCB98 /* Pods_DoctorPicker.framework */; };
+		F59AE7F1202DBE6F004F8E5B /* Toaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59AE7F0202DBE6F004F8E5B /* Toaster.swift */; };
 		F5C7CC56202AF158003B6B29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC55202AF158003B6B29 /* AppDelegate.swift */; };
 		F5C7CC58202AF158003B6B29 /* SpecialitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC57202AF158003B6B29 /* SpecialitiesViewController.swift */; };
 		F5C7CC5B202AF158003B6B29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C7CC59202AF158003B6B29 /* Main.storyboard */; };
@@ -19,12 +20,15 @@
 		F5C7CC71202B6395003B6B29 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC70202B6395003B6B29 /* Doctor.swift */; };
 		F5C7CC76202B9575003B6B29 /* DoctorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC75202B9575003B6B29 /* DoctorsViewController.swift */; };
 		F5C7CC79202BA5B9003B6B29 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7CC78202BA5B9003B6B29 /* Extensions.swift */; };
+		F5F20547202CF52000B7199E /* DoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F20545202CF52000B7199E /* DoctorCell.swift */; };
+		F5F20548202CF52000B7199E /* DoctorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F20546202CF52000B7199E /* DoctorCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2ACB84458FFE7D2A7B1CBE25 /* Pods-DoctorPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorPicker/Pods-DoctorPicker.release.xcconfig"; sourceTree = "<group>"; };
 		776679B3EA1A29EB5AD4E86A /* Pods-DoctorPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorPicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorPicker/Pods-DoctorPicker.debug.xcconfig"; sourceTree = "<group>"; };
 		9A4B72702D12A280BA5CCB98 /* Pods_DoctorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F59AE7F0202DBE6F004F8E5B /* Toaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toaster.swift; sourceTree = "<group>"; };
 		F5C7CC52202AF158003B6B29 /* DoctorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C7CC55202AF158003B6B29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5C7CC57202AF158003B6B29 /* SpecialitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialitiesViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		F5C7CC70202B6395003B6B29 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		F5C7CC75202B9575003B6B29 /* DoctorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsViewController.swift; sourceTree = "<group>"; };
 		F5C7CC78202BA5B9003B6B29 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F5F20545202CF52000B7199E /* DoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCell.swift; sourceTree = "<group>"; };
+		F5F20546202CF52000B7199E /* DoctorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoctorCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +100,7 @@
 				F5C7CC77202BA38A003B6B29 /* Other */,
 				F5C7CC6F202B637C003B6B29 /* Models */,
 				F5C7CC68202AF24F003B6B29 /* Services */,
-				F5C7CC72202B94D5003B6B29 /* Controllers */,
+				F5C7CC72202B94D5003B6B29 /* Modules */,
 				F5C7CC67202AF16A003B6B29 /* Supporting Files */,
 				F5C7CC78202BA5B9003B6B29 /* Extensions.swift */,
 				F5C7CC59202AF158003B6B29 /* Main.storyboard */,
@@ -130,20 +136,47 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		F5C7CC72202B94D5003B6B29 /* Controllers */ = {
+		F5C7CC72202B94D5003B6B29 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				F5C7CC57202AF158003B6B29 /* SpecialitiesViewController.swift */,
-				F5C7CC75202B9575003B6B29 /* DoctorsViewController.swift */,
+				F5F20542202CF4DC00B7199E /* Specialities */,
+				F5F20543202CF4E900B7199E /* Doctors */,
 			);
-			path = Controllers;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		F5C7CC77202BA38A003B6B29 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F59AE7F0202DBE6F004F8E5B /* Toaster.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		F5F20542202CF4DC00B7199E /* Specialities */ = {
+			isa = PBXGroup;
+			children = (
+				F5C7CC57202AF158003B6B29 /* SpecialitiesViewController.swift */,
+			);
+			path = Specialities;
+			sourceTree = "<group>";
+		};
+		F5F20543202CF4E900B7199E /* Doctors */ = {
+			isa = PBXGroup;
+			children = (
+				F5C7CC75202B9575003B6B29 /* DoctorsViewController.swift */,
+				F5F20544202CF4F600B7199E /* DoctorCell */,
+			);
+			path = Doctors;
+			sourceTree = "<group>";
+		};
+		F5F20544202CF4F600B7199E /* DoctorCell */ = {
+			isa = PBXGroup;
+			children = (
+				F5F20545202CF52000B7199E /* DoctorCell.swift */,
+				F5F20546202CF52000B7199E /* DoctorCell.xib */,
+			);
+			path = DoctorCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +244,7 @@
 				F5C7CC60202AF158003B6B29 /* LaunchScreen.storyboard in Resources */,
 				F5C7CC6C202AFFBC003B6B29 /* Default-568h@2x.png in Resources */,
 				F5C7CC5D202AF158003B6B29 /* Assets.xcassets in Resources */,
+				F5F20548202CF52000B7199E /* DoctorCell.xib in Resources */,
 				F5C7CC5B202AF158003B6B29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,13 +276,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-DoctorPicker/Pods-DoctorPicker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -285,7 +319,9 @@
 				F5C7CC79202BA5B9003B6B29 /* Extensions.swift in Sources */,
 				F5C7CC71202B6395003B6B29 /* Doctor.swift in Sources */,
 				F5C7CC6A202AF267003B6B29 /* NetworkService.swift in Sources */,
+				F59AE7F1202DBE6F004F8E5B /* Toaster.swift in Sources */,
 				F5C7CC6E202B3F24003B6B29 /* Speciality.swift in Sources */,
+				F5F20547202CF52000B7199E /* DoctorCell.swift in Sources */,
 				F5C7CC56202AF158003B6B29 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

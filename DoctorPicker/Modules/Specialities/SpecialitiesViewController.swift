@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ViewAnimator
 
 class SpecialitiesViewController: UIViewController {
     
@@ -86,6 +85,24 @@ extension SpecialitiesViewController: UITableViewDelegate, UITableViewDataSource
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return firstLetters
+    }
+}
+
+// MARK: - Navigation
+
+extension SpecialitiesViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard  segue.identifier == "ShowDoctors",
+            let destinationVC =  segue.destination as? DoctorsViewController,
+            let indexPath = tableView.indexPathForSelectedRow else {
+                return
+        }
+        
+        let specialityID = specsInSections[indexPath.section][indexPath.row].id
+        destinationVC.specialityID = specialityID
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

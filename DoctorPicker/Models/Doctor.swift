@@ -10,16 +10,18 @@ import Foundation
 
 struct Doctor: Codable {
     
-    var id: Int?
-    var name: String?
-    var photoUrl: String?
-    var description: String?
-    
+    var id = 0
+    var name = ""
+    var price = 0
+    var rating = ""
+    var photoUrl = ""
+//
     enum CodingKeys: String, CodingKey {
         case id = "Id"
         case name = "Name"
+        case price = "Price"
+        case rating = "Rating"
         case photoUrl = "Img"
-        case description = "Description"
     }
 }
 

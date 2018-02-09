@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ViewAnimator
 
 // Subscripting: "Some string"[0] == "S"
 extension String {
@@ -45,22 +44,3 @@ extension UIColor {
     }
 }
 
-extension UIView {
-    
-    // animateAll() from pod ViewAnitor with added parameter "reversed"
-    public func animateAll(animations: [Animation],
-                           interval: Double = ViewAnimatorConfig.interval,
-                           reversed: Bool = false) {
-        var views: [UIView] = []
-        if reversed {
-            views = subviews.reversed()
-        } else {
-            views = subviews
-        }
-        for (index, view) in views.enumerated() {
-            let delay = Double(index) * interval
-            view.animate(animations: animations, delay: delay)
-        }
-    }
-    
-}
