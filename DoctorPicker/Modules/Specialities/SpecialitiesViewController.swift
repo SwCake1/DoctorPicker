@@ -13,6 +13,7 @@ class SpecialitiesViewController: UIViewController {
     // MARK: - Properties
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var specsInSections = [[Speciality]]()
     var firstLetters = [String]()
@@ -22,6 +23,8 @@ class SpecialitiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        uiSetup()
+        
         NetworkService.shared.getSpecList() { [weak self] specialities in
             guard let specialityArray = specialities else {
                 return
@@ -29,13 +32,23 @@ class SpecialitiesViewController: UIViewController {
             
             self?.prepareData(specialities: specialityArray)
             self?.tableView.reloadData()
+            self?.turnOnActivityIndicator(false)
         }
-        
-        uiSetup()
     }
     
     fileprivate func uiSetup() {
+        turnOnActivityIndicator(true)
         tableView.sectionIndexColor = .dpPink
+    }
+    
+    fileprivate func turnOnActivityIndicator(_ isActive: Bool) {
+        if isActive {
+            activityIndicatorView.isHidden = false
+            tableView.isHidden = true
+        } else {
+            activityIndicatorView.isHidden = true
+            tableView.isHidden = false
+        }
     }
     
     // MARK: - Data prepare

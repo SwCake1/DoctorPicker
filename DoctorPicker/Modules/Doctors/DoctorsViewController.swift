@@ -13,6 +13,7 @@ class DoctorsViewController: UIViewController {
     // MARK: - Properties
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var doctors = [Doctor]()
     var specialityID = ""
@@ -22,8 +23,9 @@ class DoctorsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "DoctorCell", bundle: nil)
-        tableView?.register(nib, forCellReuseIdentifier: "DoctorCell")
+        turnOnActivityIndicator(true)
+        
+        registerCell()
         
         NetworkService.shared.getDoctors(bySpecialityId: specialityID) { [weak self] doctors in
             guard let doctorArray = doctors else {
@@ -31,6 +33,23 @@ class DoctorsViewController: UIViewController {
             }
             self?.doctors = doctorArray
             self?.tableView?.reloadData()
+            self?.turnOnActivityIndicator(false)
+        }
+        
+    }
+    
+    fileprivate func registerCell() {
+        let nib = UINib(nibName: "DoctorCell", bundle: nil)
+        tableView?.register(nib, forCellReuseIdentifier: "DoctorCell")
+    }
+    
+    fileprivate func turnOnActivityIndicator(_ isActive: Bool) {
+        if isActive {
+            activityIndicatorView.isHidden = false
+            tableView.isHidden = true
+        } else {
+            activityIndicatorView.isHidden = true
+            tableView.isHidden = false
         }
     }
 }
