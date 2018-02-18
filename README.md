@@ -9,3 +9,5 @@
 https://109.docs.apiary.io/#introduction/changelog
 
 Результат опубликовать в открытий репозиторий.
+
+<img src="https://github.com/swcake1/DoctorPicker/raw/master/IMG_7814.PNG" width="320"> <img src="https://github.com/swcake1/DoctorPicker/raw/master/IMG_7815.PNG" width="320">
