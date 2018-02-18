@@ -56,9 +56,9 @@ extension DoctorsViewController: UITableViewDelegate, UITableViewDataSource {
         
         let doctor = doctors[indexPath.row]
         doctorCell.setup(name: doctor.name,
-                         price: doctor.price,
-                         rating: doctor.rating,
-                         imageURL: doctor.photoUrl)
+                         price: doctor.price ?? 0,
+                         rating: doctor.rating ?? "-",
+                         imageURL: doctor.photoUrl ?? "")
         return doctorCell
     }
     

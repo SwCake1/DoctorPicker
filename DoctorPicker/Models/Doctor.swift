@@ -12,10 +12,10 @@ struct Doctor: Codable {
     
     var id = 0
     var name = ""
-    var price = 0
-    var rating = ""
-    var photoUrl = ""
-//
+    var price: Int?
+    var rating: String?
+    var photoUrl: String?
+
     enum CodingKeys: String, CodingKey {
         case id = "Id"
         case name = "Name"

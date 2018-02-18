@@ -62,8 +62,9 @@ class NetworkService {
                             
                             print("Object request: ", response.request?.url?.absoluteString ?? "")
                             
-                            let objectList = self?.decode(to: type, from: data)
-                            completion(objectList!)
+                            if let objectList = self?.decode(to: type, from: data) {
+                                completion(objectList)
+                            }
         }
     }
     

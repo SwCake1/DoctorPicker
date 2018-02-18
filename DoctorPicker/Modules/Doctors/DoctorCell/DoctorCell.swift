@@ -46,11 +46,12 @@ class DoctorCell: UITableViewCell {
     func setup(name: String, price: Int, rating: String, imageURL: String) {
         
         nameLabel.text = name
-        priceLabel.text = String(price)
+        priceLabel.text = price == 0 ? "-" : String(price)
         ratingLabel.text = rating
-        
-        let url = URL(string: imageURL)
-        photoView.kf.setImage(with: url)
+    
+        if let url = URL(string: imageURL) {
+            photoView.kf.setImage(with: url)
+        }
     }
     
     // MARK: - Actions
